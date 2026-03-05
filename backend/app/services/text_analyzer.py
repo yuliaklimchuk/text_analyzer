@@ -7,9 +7,11 @@ STOP_WORDS = {"the", "a", "an", "is", "are", "was", "were", "in", "on", "at",
 def analyze_text(text: str):
     text = text.strip()
 
-    ELLIPSIS = "…"
-    text_for_sentences = text.replace("...", ELLIPSIS)
-    sentence_count = len([s for s in re.split(r"[.!?…]", text_for_sentences) if s.strip()])
+    # ELLIPSIS = "…"
+    # text_for_sentences = text.replace("...", ELLIPSIS)
+    # sentence_count = len([s for s in re.split(r"[.!?…]", text_for_sentences) if s.strip()])
+    sentences = re.split(r"[.!?…]+", text)
+    sentence_count = len([s for s in sentences if s.strip()])
 
     clean_text = re.sub(r'[^\w\s\']', '', text.lower())
     words = clean_text.split()

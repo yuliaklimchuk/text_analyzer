@@ -14,6 +14,7 @@ async function analyzeText() {
 
     const resultsDiv = document.getElementById("results");
 
+
     resultsDiv.innerHTML = `
         <p><b>Word count:</b> ${data.word_count}</p>
         <p><b>Characters (with spaces):</b> ${data.char_count_with_spaces}</p>
@@ -21,8 +22,8 @@ async function analyzeText() {
         <p><b>Sentence count:</b> ${data.sentence_count}</p>
 
         <h3>Top words</h3>
-        <ul>
-            ${data.top_words.map(w => `<li>${w.word}: ${w.count}</li>`).join("")}
-        </ul>
+         <ul>
+             ${data.top_words.map(w => `<li>${w.word}: ${w.count}</li>`).join("")}
+         </ul>
     `;
 }
