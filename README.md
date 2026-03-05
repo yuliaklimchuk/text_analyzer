@@ -29,24 +29,6 @@ Text analysis rules:
 - Ellipsis (`...`) counts as a **single sentence delimiter**
 
 ---
-
-# Project Structure
-text_analyzer
-│
-├── backend
-│ ├── app
-│ │ ├── routers
-│ │ ├── services
-│ │ │ └── text_analyzer.py
-│ │ └── main.py
-│ └── tests
-│
-├── frontend
-│ ├── index.html
-│ └── script.js
-│
-└── docker-compose.yml
-
 # Setup Instructions
 
 ### 1 Clone the repository
